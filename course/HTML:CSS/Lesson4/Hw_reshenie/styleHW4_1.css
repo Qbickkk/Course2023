@@ -1,0 +1,56 @@
+#form{
+    width: 25vw;
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.sing_in{
+    width: 95%;
+    height: 87%;
+    border: 1px solid darkgrey;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.registration{
+    width: 95%;
+    height: 10%;
+    border: 1px solid darkgrey;
+}
+
+.sing_in img{
+    width: 60%;
+    margin: 20px;
+}
+form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.input{
+    width: 70%;
+    height: 35px;
+    padding: 0 10px;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+}
+#buttonReg{
+    background-color: royalblue;
+    width: 76%;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+
+}
+.sing_in h2{
+    font-size: 18px;
+    color: #4050b5 ;
+}

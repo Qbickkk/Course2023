@@ -1,0 +1,43 @@
+form{
+    width: 500px;
+    height: 600px;
+    background-color: darkseagreen;
+    margin: 0 auto;
+    border-radius: 30px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.field{
+    border: none;
+    border-radius: 10px;
+    margin: 5px 0;
+    width: 300px;
+    height: 35px;
+    padding: 5px 25px;
+}
+h3{
+    color: blueviolet;
+}
+
+.account_type{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: blueviolet;
+}
+#submit{
+    height: 50px;
+    width: 100px;
+    background-color: chartreuse;
+    margin-top: 30px;
+    border: none;
+    color: blueviolet;
+}
+
+#submit:hover{
+    background-color: tomato;
+}

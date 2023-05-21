@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodatkove</title>
+    <style>
+        .linear{
+            height: 300px;
+            width: 300px;
+            background: linear-gradient(180deg, red, blue, yellow);
+        }
+        .radial{
+            height: 300px;
+            width: 300px;
+            background: radial-gradient(coral 20%, red 20%, transparent 60%);
+        }
+        .text{
+            border: 1px solid red;
+        }
+        .text:focus{
+            outline: 2px solid green;
+            border: none;
+        }
+        .radio{
+            appearance: none;
+           width: 20px;
+           height: 20px;
+            border: 1px solid pink;
+            border-radius: 50%;
+        }
+        .radio:checked{
+            border-color: yellow;
+            background: radial-gradient(orange 0%, hotpink 40%, transparent 60%);
+        }
+        .yes{
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 1px solid pink;
+            border-radius: 5px;
+            position: absolute;
+        }
+        .yes:checked{
+            background-image: url("Instagram_Logo_2016.png");
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="linear"></div>
+    <div class="radial"></div>
+
+    <input type="text" class="text" name="username" placeholder="name">
+
+    <div>
+        <label><input type="radio" name="type" value="personal" class="radio">Personal</label>
+        <label><input type="radio" name="type" value="business" class="radio">Business</label>
+
+    </div>
+
+    <label>Yes <input type="checkbox" name="yes" class="yes"></label>
+<br>
+<label>Оберіть автомоьіль</label>
+<select>
+    <option>
+
+    </option>
+
+
+</select>
+
+</body>
+</html>

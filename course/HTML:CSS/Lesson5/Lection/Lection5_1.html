@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <style>
+        /*!* id class pseudo tag  *!*/
+        /*!*  0   1      0    3   *!*/
+        /*div.content > ul > li{*/
+        /*    color: coral;*/
+        /*}*/
+        /*!*0 0 0 2*!*/
+        /*ul li{*/
+        /*    color: chartreuse;*/
+        /*}*/
+        /*!*0 0 0 3*!*/
+        /*body ul li{*/
+        /*    color: hotpink;*/
+        /*}*/
+       /*div.content > ul:nth-child(3) > li:first-line{*/
+       /*    color: red;*/
+       /*}*/
+    /*  id class tag space > nth  */
+
+        li{
+            list-style: none;
+        }
+
+       div.content > ul > li:before{
+           content: "";
+           width: 10px;
+           height: 10px;
+           background-image: url("apple-touch-icon.png") ;
+           background-size: cover;
+           display: inline-block;
+           margin-right: 10px;
+       }
+
+       li:after{
+           content: "!!!";
+       }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="content">
+
+        <p>Hello</p>
+        <p>Hello</p>
+
+        <ul>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ul>
+        <ul>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ul>
+    </div>
+
+    <ul class="content">
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
+
+
+
+
+
+
+
+</body>
+</html>
