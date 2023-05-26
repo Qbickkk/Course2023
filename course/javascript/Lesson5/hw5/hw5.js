@@ -31,7 +31,7 @@
 // - створити функцію яка приймає масив та виводить кожен його елемент
 // let x = (arr) => {
 //     for (const element of arr) {
-//         console.log(element);
+//         console.log(` element: ${element}`);
 //     }
 // }
 // x([1, 2, 3, 4, 5, 6, 8]);
@@ -90,3 +90,51 @@
 // x(mas);
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // - створити функцію яка повертає найменьше число з масиву
+
+// const x = (arr) =>{
+//     let result = arr[0];
+//     for (let i = 1; i < arr.length; i++) {
+//        if (result > arr[i]){
+//            result = arr[i];
+//        }
+//     }
+//     return result;
+// }
+//
+// console.log(x([23, 45, -89, 2, 99, 121]));
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
+
+// const sum = (arr) => {
+//     let result = 0;
+//     for (const element of arr) {
+//         result = result + element;
+//     }
+//     return result;
+// }
+//
+// console.log(sum([1, 2, 10]));
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відаовідних індексах
+// Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
+
+// const swap = (arr, index1,index2) => {
+//     let number1 = arr[index1];
+//     let number2 = arr[index2];
+//     arr[index1] = number2;
+//     arr[index2] = number1;
+//     return arr;
+// }
+// console.log(swap([11, 22, 33, 44], 0, 1));
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
+// Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
+
+// const exchange = (sumUAH,currencyValues,exchangeCurrency) => {
+//     for (const item of currencyValues) {
+//         if (item[`currency`] === exchangeCurrency){
+//             return sumUAH / item.value;
+//         }
+//     }
+// }
+// console.log(exchange(10000, [{currency: 'USD', value: 40}, {currency: 'EUR', value: 42}], 'USD'));
