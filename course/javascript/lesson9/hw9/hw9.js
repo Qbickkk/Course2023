@@ -30,7 +30,7 @@
 // for (const element of arr) {
 //     let list = document.createElement('li');
 //     ul.appendChild(list);
-//     list.innerText = `${element}`;
+//     list.innerText = element;
 // }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -46,7 +46,7 @@
 // Для кожного елементу масиву зробити блок в якому вивести інформацію про title та monthDuration
 // Завдання робити через цикли.
 
-
+//
 // for (const element of coursesAndDurationArray) {
 //
 //     let container = document.createElement('div');
@@ -54,7 +54,7 @@
 //
 //     let h3 = document.createElement('h3');
 //     container.appendChild(h3);
-//     h3.innerText = `${element.title}, monthDuration ${element.monthDuration}`;
+//     h3.innerText = `${element.title} | monthDuration ${element.monthDuration}`;
 //
 // }
 
@@ -242,25 +242,36 @@ let coursesArray = [
 
 for (const element of coursesArray) {
 
-    let mainContainer = document.createElement('div');
-    document.body.appendChild(mainContainer);
+let mainBlock = document.createElement('div');
 
-    let h1 = document.createElement('h1');
-    mainContainer.appendChild(h1);
-    h1.style.textAlign = 'center'
-    h1.innerText = `${element.title}`;
+let title = document.createElement('h1');
+
+let durationsWrapper = document.createElement('div');
+let monthDuration = document.createElement('div');
+let hourDuration = document.createElement('div');
+
+let modules = document.createElement('ul');
+
+    for (const module of element.modules) {
+        let li = document.createElement('li');
+        li.innerText = module;
+        modules.appendChild(li);
+    }
 
 
-    let h2 = document.createElement('h2');
-    mainContainer.appendChild(h2);
-    h2.innerText = `Duration: Month: ${element.monthDuration}, Hours: ${element.hourDuration}`;
+durationsWrapper.append(monthDuration,hourDuration);
+mainBlock.append(title,durationsWrapper,modules);
+document.body.appendChild(mainBlock);
 
-    let h3 = document.createElement('h3');
-    mainContainer.appendChild(h3);
-    h3.innerText = `Modules:`;
+title.innerText = element.title;
+monthDuration.innerText = element.monthDuration;
+hourDuration.innerText = element.hourDuration;
 
-    let ul = document.createElement('ul');
-    h3.appendChild(ul);
+mainBlock.classList.add('wrapper');
+title.classList.add('text-center');
+durationsWrapper.classList.add('flex');
+
+
 
 
 

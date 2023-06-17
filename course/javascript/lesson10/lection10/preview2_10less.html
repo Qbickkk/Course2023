@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Events</title>
+  <style>
+    #target{
+      width: 200px;
+      height: 200px;
+      background-color: silver;
+    }
+  </style>
+</head>
+<body>
+
+<div id="target" ></div>
+
+
+    <form  id="f1" >
+        <input id="i1" name="username">
+        <button>send</button>
+    </form>
+
+<script>
+
+let target = document.getElementById('target');
+target.onclick = function (ev) {
+    console.log('click');
+    console.log(ev);
+};
+
+// target.onmousemove = function (ev) {
+//     console.log(ev.clientX,ev.clientY);
+//         let r = ev.clientX;
+//         let g = ev.clientX;
+//         let b = ev.clientY;
+//         this.style.background = `rgb(${r},${g},${b})`;
+// };
+
+// target.addEventListener("click", function () {
+//     console.log('click2');
+// });
+//
+// target.onmouseover = function () {
+//     console.log('over');
+// };
+//
+// target.onmouseleave = function () {
+//     console.log('leave');
+// };
+
+// let input = document.getElementById('i1');
+// input.oninput = function () {
+//     console.log(this.value);
+//     target.innerText = this.value;
+// };
+
+// let f1 = document.forms.f1;
+// f1.onsubmit = function (ev) {
+//     ev.preventDefault(); // функція прибирає дефолтні дії, робить тільки те, що вказано далі
+//     console.log('hello');
+//    let user = {name: this.username.value};
+//     console.log(user); // ls fetch api
+// };
+
+window.onload = function () {
+    console.log('load');
+}
+
+document.onreadystatechange = function () {
+    if (document.readyState === 'interactive') {
+        document.body.innerText = 'loading start';
+    }
+    if (document.readyState === 'complete') {
+        document.body.innerText = 'loading complete';
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
