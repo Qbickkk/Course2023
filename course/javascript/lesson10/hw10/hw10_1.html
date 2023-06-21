@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10_1</title>
+</head>
+<body>
+
+<h1>Count:<i id="number"></i></h1>
+
+
+
+
+
+<script>
+
+    let count = localStorage.getItem('count')||0;
+    let block = document.getElementById('number');
+    let newCount = (+count + 1).toString();
+    block.innerText = newCount;
+    localStorage.setItem('count', newCount);
+
+</script>
+</body>
+</html>

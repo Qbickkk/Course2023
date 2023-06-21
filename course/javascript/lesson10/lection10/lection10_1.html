@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Less10</title>
+</head>
+<body>
+
+
+<ul id="xxx">
+  <li></li>
+  <li class="listItem">item</li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+<div class="divItem">
+  <ul>
+    <li id="yyy"></li>
+    <li class="asdqewe"></li>
+    <li></li>
+    <li class=""></li>
+    <li></li>
+    <li>
+        <div class="qqqqqqqqqq">
+          <a href=""></a>
+        </div>
+    </li>
+    <li>
+        <ul class="asd">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+    </li>
+  </ul>
+</div>
+
+
+
+
+<script>
+
+  function explorer(htmlElement) {
+    console.log(htmlElement);
+    let children = htmlElement.children;
+    if (children.length !== 0){
+      for (const child of children){
+        explorer(child);
+      }
+    }
+
+
+  }
+
+  explorer(document.body)
+
+
+</script>
+</body>
+</html>

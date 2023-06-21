@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork#10</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<form name="creator">
+    <label for="name">Your Name:
+        <input type="text" name="name" id="name">
+    </label>
+    <br>
+    <label for="surname">Your Surname:
+        <input type="text" name="surname" id="surname">
+    </label>
+    <br>
+    <label for="age">Yor Age:
+        <input type="number" name="age" id="age">
+    </label>
+    <br>
+    <br>
+    <button>Create</button>
+</form>
+
+
+<script>
+
+    let form = document.creator;
+
+    form.onsubmit = function (e) {
+        e.preventDefault();
+
+        let wrapper = document.createElement('div');
+        let name = document.createElement('div');
+        let surname = document.createElement('div');
+        let age = document.createElement('div');
+
+        name.innerText = form.name.value;
+        surname.innerText = form.surname.value;
+        age.innerText = form.age.value;
+
+        wrapper.append(name,surname,age);
+        document.body.appendChild(wrapper);
+    }
+
+
+
+
+
+</script>
+</body>
+</html>

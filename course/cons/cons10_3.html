@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count</title>
+</head>
+<body>
+
+<div id="container"></div>
+
+
+<script>
+  let count = localStorage.getItem('count') || 0;
+  let content = document.getElementById('container');
+
+  let newCount = (+count + 1);
+  content.innerText = newCount;
+
+  localStorage.setItem('count', newCount);
+</script>
+</body>
+</html>

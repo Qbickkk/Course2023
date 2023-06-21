@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Local Storage Example</title>
+    <style>
+        .products img{
+            width: 200px;
+
+        }
+        .products button{
+            display: block;
+            width: 200px;
+        }
+    </style>
 </head>
 <body>
 
 
 <div class="products">
-    <div>
-        <h2>Product</h2>
-    </div>
-    <div></div>
-    <div></div>
+
 </div>
 
 
@@ -21,7 +27,7 @@
 
 <script>
 
-    let productsDiv = document.getElementsByClassName('products');
+    let productsDiv = document.getElementsByClassName('products')[0];
 
 
      let products = [
@@ -51,6 +57,20 @@
      for (const product of products) {
          let productBlock = document.createElement('div');
          productsDiv.appendChild(productBlock);
+        let h2 =  document.createElement('h2');
+        h2.innerText = `${product.title} ${product.price} UAH`;
+        let img = document.createElement('img');
+        img.src = product.image;
+         let button = document.createElement('button');
+        button.innerText = 'add to cart';
+
+        button.onclick = function () {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+         productBlock.append(h2,img,button);
+
      }
 
 

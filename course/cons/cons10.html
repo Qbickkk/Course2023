@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cons10</title>
+</head>
+<body>
+
+<!--<form name="userForm">-->
+<!--    <label for="modelCar">Model Car:-->
+<!--        <input type="text" name="modelCar" id="modelCar" required>-->
+<!--    </label>-->
+<!--    <br>-->
+<!--     <label for="priceCar">Price Car:-->
+<!--        <input type="number" name="priceCar" id="priceCar" required>-->
+<!--    </label>-->
+<!--    <br>-->
+<!--    <br>-->
+<!--    <button>Send</button>-->
+<!--</form>-->
+
+<div id="container"></div>
+
+<a href="Cons10_1.html">Favorite Page</a>
+
+
+<script>
+    // let form = document.userForm;
+    //
+    // form.onsubmit = function (e) {
+    //     e.preventDefault();
+    //
+    //     let modelCar = form.modelCar.value;
+    //     let priceCar = form.priceCar.value;
+    //
+    //     let store = JSON.parse(localStorage.getItem('cars')) || [];
+    //     store.push({Model: modelCar, Price: priceCar});
+    //     localStorage.setItem('cars', JSON.stringify(store));
+    // }
+
+    let carData = [
+        {model: 'BMW', price: 50000},
+        {model: 'Toyota', price: 30000},
+        {model: 'Mercedes', price: 60000},
+        {model: 'Honda', price: 25000},
+        {model: 'Ford', price: 35000},
+        {model: 'Audi', price: 55000},
+        {model: 'Chevrolet', price: 28000},
+        {model: 'Lexus', price: 45000},
+        {model: 'Volkswagen', price: 32000},
+        {model: 'Tesla', price: 70000}
+    ];
+
+    localStorage.setItem('favorite', JSON.stringify([]));
+
+    let content = document.getElementById('container');
+
+    carData.map(car =>{
+        let div = document.createElement('div');
+        div.innerText = `Model:${car.model}, Price:${car.price}`;
+
+        let btn = document.createElement('button');
+        btn.innerText = 'Add to favorite';
+
+        btn.onclick = function (e) {
+            e.preventDefault();
+            let favorite = JSON.parse(localStorage.getItem('favorite'));
+            favorite.push(car);
+            localStorage.setItem('favorite', JSON.stringify(favorite));
+            btn.disabled = true;
+        }
+
+
+        content.append(div, btn);
+
+
+
+    })
+
+
+
+
+</script>
+</body>
+</html>
