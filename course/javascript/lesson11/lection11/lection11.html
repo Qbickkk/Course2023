@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>event loop promises</title>
+</head>
+<body>
+
+
+
+
+<script>
+
+    // let intervalID =  setInterval(()=>{
+    //     console.log('interval');
+    // },1000);
+
+
+    // clearTimeout(timeoutID);
+    // clearInterval(intervalID);
+
+    console.log('start');
+
+    setTimeout(()=>{
+        console.log('timeout 1');
+    },1000);
+
+    setTimeout(()=>{
+        console.log('timeout 2');
+    },999);
+
+    console.log('end');
+
+</script>
+<script>
+
+    // let intevalID = setInterval(()=>{
+    //    document.body.innerText = new Date();
+    // });
+
+
+</script>
+</body>
+</html>

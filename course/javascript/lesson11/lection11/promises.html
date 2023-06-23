@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+
+
+
+
+<script>
+
+  // setTimeout(()=>{
+  //   console.log('hello'); //1000
+  //   setTimeout(()=>{
+  //     console.log('world');//3000
+  //       setTimeout(()=>{
+  //         console.log('okten');//6000
+  //       },3000);
+  //   },2000);
+  // },1000);
+
+// інша синтаксична конструкція (більш адекватна)
+
+  new Promise((resolve)=>{
+      let value = 1;
+      setTimeout(()=>{
+        console.log('hello');
+        resolve(value);
+      },1000)
+
+  })
+
+    .then((value)=>{
+
+      return new Promise((resolve)=>{
+
+      setTimeout(()=>{
+        value = value + 1;
+        console.log('world', value);
+        resolve(value);
+      },2000)
+
+      })
+
+    })
+       .then((value)=>{
+         return new Promise(()=>{
+
+           setTimeout(()=>{
+             value = value + 2;
+             console.log('okten', value);
+           },3000)
+
+
+            })
+          })
+
+
+
+
+
+</script>
+</body>
+</html>
