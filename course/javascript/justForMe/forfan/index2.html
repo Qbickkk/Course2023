@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1><span>USER DETAILS</span></h1>
+
+
+
+
+<script>
+
+    const userId = new URL(location.href).searchParams.get('userId');
+
+
+
+fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+    .then((response) => response.json())
+    .then(user =>{
+        console.log(user);
+
+
+        const div = document.createElement('div');
+        document.body.appendChild(div);
+
+        const ul = document.createElement('ul');
+        div.appendChild(ul);
+
+
+
+    })
+
+function foo(object) {
+    for (const key in object) {
+
+    }
+}
+
+
+
+</script>
+</body>
+</html>
