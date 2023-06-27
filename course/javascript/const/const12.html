@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1><i>ToDos</i></h1>
+
+
+
+
+
+<script>
+
+  let url = 'https://jsonplaceholder.typicode.com/todos';
+
+  fetch(url)
+          .then(response => response.json())
+          .then(todos => {
+
+            console.log(todos)
+
+            todos.map(value => {
+              let div = document.createElement('div');
+              document.body.appendChild(div);
+              div.innerText = JSON.stringify(value);
+
+            });
+
+
+
+          })
+
+
+
+
+</script>
+</body>
+</html>
