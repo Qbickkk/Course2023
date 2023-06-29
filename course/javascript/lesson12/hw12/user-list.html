@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>User-List</h1>
+
+<div class="wrap"></div>
+
+
+
+<script>
+
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then((users) => {
+
+            const block = document.getElementsByClassName('wrap')[0];
+
+            for (const user of users) {
+                const user_block = document.createElement('div');
+                user_block.innerText = `#${user.id} - ${user.name}`;
+                block.appendChild(user_block);
+
+                const btn = document.createElement('button');
+                btn.innerText = 'More Info';
+                user_block.appendChild(btn);
+
+                btn.onclick = function (ev) {
+                    location.href = `user-info.html/?id=${user.id}`;
+                }
+
+            }
+
+        })
+
+
+</script>
+</body>
+</html>

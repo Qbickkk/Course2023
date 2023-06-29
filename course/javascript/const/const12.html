@@ -17,21 +17,26 @@
   let url = 'https://jsonplaceholder.typicode.com/todos';
 
   fetch(url)
-          .then(response => response.json())
-          .then(todos => {
+      .then(response => response.json())
+      .then(todos => {
 
-            console.log(todos)
+            todos.map(todo => {
 
-            todos.map(value => {
-              let div = document.createElement('div');
-              document.body.appendChild(div);
-              div.innerText = JSON.stringify(value);
+                console.log(todo);
 
-            });
+                let div = document.createElement('div');
+                document.body.appendChild(div);
+                div.innerText = `${todo.id} - ${todo.title}`;
 
+                let a = document.createElement('a');
+                a.innerText = 'Click me';
+                a.style.border  = '1px solid black';
+                a.href = `todo.html/?id=` + todo.id;
 
+                div.appendChild(a);
+            })
 
-          })
+      })
 
 
 
